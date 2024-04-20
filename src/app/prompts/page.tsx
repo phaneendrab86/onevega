@@ -39,7 +39,22 @@ export default function Prompts() {
     }
     return (
         <div> 
+            <table className="table tabled-bordered w-100">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                    </tr>
+                    {data.map((data) => (
+                    <tr>
+                        <td>{data.id}</td>
+                        <td>{data.name}</td>
+                        <td>{data.createdAt}</td>
+                    </tr>
+                    ))}
+                </table>
             <div className="w-full flex flex-wrap">
+                
             {data.map((data) => (<Card className="w-44 m-2">
                     <CardHeader>
                         <CardTitle>{data.id}</CardTitle>
